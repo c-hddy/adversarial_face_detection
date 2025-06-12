@@ -141,10 +141,14 @@ umap-learn
 Pillow
 ```
 
-## 6. 기여 방법
+## 6. Reference
 
-프로젝트에 기여하려면... (팀에 따라 작성)
-
-## 7. 라이선스
-
-이 프로젝트는 [라이선스 종류]에 따라 라이선스가 부여됩니다.
+```text
+@inproceedings{shamshad2023evading,
+  title={Evading Forensic Classifiers With Attribute-Conditioned Adversarial Faces},
+  author={Shamshad, Fahad and Srivatsan, Koushik and Nandakumar, Karthik},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16469--16478},
+  year={2023}
+}
+```
