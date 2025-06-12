@@ -1,0 +1,30 @@
+# --- .gitignore 파일 내용 ---
+# Data and Models - these are usually too large or sensitive to upload
+data/
+models/
+results/
+wandb/
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+.idea/ # PyCharm specific
+.vscode/ # VS Code specific
+
+# Operating System files
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+*.bak
+*.tmp
+*.log
+
+# Jupyter Notebook / Google Colab files
+.ipynb_checkpoints/
+*.ipynb_checkpoints/

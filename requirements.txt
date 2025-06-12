@@ -1,0 +1,12 @@
+torch>=1.10.0
+torchvision
+numpy
+scikit-learn
+matplotlib
+tqdm
+wandb
+joblib
+pandas
+seaborn
+umap-learn
+Pillow
