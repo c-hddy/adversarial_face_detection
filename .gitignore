@@ -1,30 +1,54 @@
-# --- .gitignore 파일 내용 ---
-# Data and Models - these are usually too large or sensitive to upload
-data/
-models/
-results/
-wandb/
+# 데이터를 위한 폴더 구조를 유지하고, 실제 데이터 파일은 무시하며, .gitkeep 파일은 추적합니다.
+# 'data/' 폴더 자체는 Git이 추적합니다.
+data/latents/RI/*
+!data/latents/RI/.gitkeep       # RI 폴더 안의 .gitkeep은 무시하지 않음
+
+data/latents/ACAI/*
+!data/latents/ACAI/.gitkeep     # ACAI 폴더 안의 .gitkeep은 무시하지 않음
+
+data/images_for_inference/*
+!data/images_for_inference/.gitkeep # images_for_inference 폴더 안의 .gitkeep은 무시하지 않음
+
+# 모델 저장을 위한 폴더 구조를 유지하고, 실제 모델 파일은 무시하며, .gitkeep 파일은 추적합니다.
+models/mlp_classifier/*
+!models/mlp_classifier/.gitkeep # mlp_classifier 폴더 안의 .gitkeep은 무시하지 않음
+
+models/image_classifier/*
+!models/image_classifier/.gitkeep # image_classifier 폴더 안의 .gitkeep은 무시하지 않음
+
+models/e4e_encoder/*
+!models/e4e_encoder/.gitkeep    # e4e_encoder 폴더 안의 .gitkeep은 무시하지 않음
+
+# 결과 저장을 위한 폴더 구조를 유지하고, 실제 결과 파일은 무시하며, .gitkeep 파일은 추적합니다.
+results/latent_visualization/*
+!results/latent_visualization/.gitkeep # latent_visualization 폴더 안의 .gitkeep은 무시하지 않음
+
+results/mlp_training_plots/*
+!results/mlp_training_plots/.gitkeep # mlp_training_plots 폴더 안의 .gitkeep은 무시하지 않음
+
+
+# --- 공통적으로 무시할 파일들 (이전과 동일) ---
 
 # Python specific
-__pycache__/
-*.pyc
+__pycache__/          # 파이썬 캐시 폴더 무시
+*.pyc                 # 컴파일된 파이썬 바이트코드 파일 무시
 *.pyo
 *.pyd
 .Python
-env/
-venv/
-*.env
-.idea/ # PyCharm specific
-.vscode/ # VS Code specific
+env/                  # 가상 환경 폴더 무시
+venv/                 # 가상 환경 폴더 무시
+*.env                 # 환경 변수 파일 무시 (보안상 민감)
+.idea/                # PyCharm IDE 설정 폴더 무시
+.vscode/              # VS Code IDE 설정 폴더 무시
 
 # Operating System files
-.DS_Store # macOS
-Thumbs.db # Windows
-ehthumbs.db # Windows
-*.bak
-*.tmp
-*.log
+.DS_Store             # macOS 전용 숨김 파일 무시
+Thumbs.db             # Windows 썸네일 캐시 파일 무시
+ehthumbs.db
+*.bak                 # 백업 파일 무시
+*.tmp                 # 임시 파일 무시
+*.log                 # 로그 파일 무시
 
 # Jupyter Notebook / Google Colab files
-.ipynb_checkpoints/
+.ipynb_checkpoints/   # Jupyter/Colab 노트북 체크포인트 폴더 무시
 *.ipynb_checkpoints/
